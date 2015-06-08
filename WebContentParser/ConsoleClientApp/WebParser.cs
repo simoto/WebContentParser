@@ -53,7 +53,7 @@
                     using (StreamWriter writer = new StreamWriter("textFile.txt", true))
                     {
                         writer.WriteLine(i);
-                        writer.WriteLine(content.Replace("<BR>", string.Empty));
+                        writer.WriteLine(HtmlRemoval.StripTagsRegex(content, " "));
                         writer.WriteLine();
                     }
 
